@@ -36,7 +36,7 @@
 
     <context-param>
         <param-name>javax.faces.CONFIG_FILES</param-name>
-        <param-value>/WEB-INF/context.xml</param-value>
+        <param-value>/META-INF/context.xml</param-value>
     </context-param>
     <!--DB Connection end-->
 </web-app>

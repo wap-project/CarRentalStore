@@ -6,8 +6,10 @@ import java.util.Map;
 
 public class CommandFactory {
     private static Map<String, Command> commands = new HashMap<>();
-    {
+
+    static {
         commands.put("index", new IndexCommand());
+        commands.put("bad", new CommandTemplate() );
     }
 
     public static Command createCommand(HttpServletRequest request){

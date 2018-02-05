@@ -11,7 +11,7 @@ public class CommandTemplate implements Command {
 
     private static final Logger logger = LoggerFactory.getLogger(CommandTemplate.class);
 
-    public void dispatherForward(HttpServletRequest request, HttpServletResponse response, RequestDispatcher requestDispatcher) {
+    public void dispatcherForward(HttpServletRequest request, HttpServletResponse response, RequestDispatcher requestDispatcher) {
         try {
             requestDispatcher.forward(request, response);
         } catch (Exception e) {
@@ -20,10 +20,15 @@ public class CommandTemplate implements Command {
     }
 
 
+    public void infoRedirect(HttpServletRequest request, HttpServletResponse response, String message){
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/info.tiles");
+        request.setAttribute("info", message);
+        dispatcherForward(request, response, requestDispatcher);
+    }
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) {
-
+        infoRedirect(request, response, "BAD_COMMAND" );
     }
 
 

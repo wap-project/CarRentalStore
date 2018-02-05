@@ -10,6 +10,6 @@ public class IndexCommand extends CommandTemplate {
         if (path.equals("/"))
             path = "/index";
 
-        dispatherForward(request, response, request.getRequestDispatcher(path + ".tiles"));
+        dispatcherForward(request, response, request.getRequestDispatcher(path + ".tiles"));
     }
 }

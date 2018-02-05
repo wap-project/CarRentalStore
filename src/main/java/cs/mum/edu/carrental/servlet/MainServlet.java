@@ -34,6 +34,15 @@ public class MainServlet extends HttpServlet {
         }
     }
 
+    @Override
+    public void destroy() {
+        try {
+            DbInitDestroyDao daoInitDestroy = DaoFactory.getDbInitDestroyDao();
+            daoInitDestroy.destroyDB();
+        } catch (SQLException e) {
+            logger.error("DBError", e);
+        }
+    }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -42,6 +51,7 @@ public class MainServlet extends HttpServlet {
         clearSessionInvalidUser(request);
         autorizeByCookies(request);
         Command command = CommandFactory.createCommand(request);
+        System.out.println(command.getClass().getCanonicalName());
         command.execute(request, response);
     }
 

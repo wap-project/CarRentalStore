@@ -23,7 +23,7 @@ public class DaoFactory {
 
     public static DbInitDestroyDao getDbInitDestroyDao() throws SQLException {
         DbInitDestroyDao DbInitDestroyDao = new DbInitDestroyDao();
-        System.out.println(dataSource.toString());
+        System.out.println(dataSource);
         DbInitDestroyDao.setConnection(dataSource.getConnection());
         return DbInitDestroyDao;
     }

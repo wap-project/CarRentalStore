@@ -1,6 +1,7 @@
 package cs.mum.edu.carrental.command;
 
 import cs.mum.edu.carrental.command.car.SearchCarCommand;
+import cs.mum.edu.carrental.command.order.*;
 import cs.mum.edu.carrental.command.user.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,17 +23,21 @@ public class CommandFactory {
         commands.put("searchCar", new SearchCarCommand());
         //User relevent end
 
+        //Administrator relevent begin
+        commands.put("allData", new AllDataCommand());
+        commands.put("order", new OrderDealCommand());
+        commands.put("approve_order", new OrderApproveCommand());
+        commands.put("reject_order", new OrderRejectCommand());
+        commands.put("add_penalty", new OrderPenaltyCommand());
+        commands.put("close_order", new OrderCloseCommand());
+        //Administrator relevent end
 
 //        commands.put("language", new LanguageCommand());
 //        commands.put("searchCar", new SearchCarCommand());
 //        commands.put("reserve", new ReserveCommand());
 //        commands.put("myData", new MyDataCommand());
-//        commands.put("allData", new AllDataCommand());
-//        commands.put("order", new ShowOrderCommandTemplate());
-//        commands.put("approve_order", new ApproveOrderCommand());
-//        commands.put("reject_order", new RejectOrderCommand());
-//        commands.put("add_penalty", new AddPenaltyCommand());
-//        commands.put("close_order", new CloseOrderCommand());
+//
+
 
     }
 

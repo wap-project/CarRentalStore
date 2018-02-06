@@ -7,3 +7,4 @@ target
 *.iml
 atlassian-ide-plugin.xml
 file_storage
+src/main/webapp/META-INF/context.xml

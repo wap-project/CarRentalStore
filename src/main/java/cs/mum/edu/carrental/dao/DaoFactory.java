@@ -38,4 +38,10 @@ public class DaoFactory {
         daoCar.setConnection(dataSource.getConnection());
         return daoCar;
     }
+
+    public static OrderDao getOrderDao() throws SQLException {
+        OrderDao orderDao = new OrderDao();
+        orderDao.setConnection(dataSource.getConnection());
+        return orderDao;
+    }
 }

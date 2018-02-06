@@ -14,9 +14,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
-/**
- * Created by Сергей on 22.12.2014.
- */
 public class DaoCar {
     Connection connection;
     final static ResourceBundle sqlResourceBundle = ResourceBundle.getBundle("sqlstatements");

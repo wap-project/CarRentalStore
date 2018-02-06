@@ -15,9 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * Created by Сергей on 22.12.2014.
- */
 public class SearchCarCommand extends CommandTemplate {
 
     private static final Logger logger = LoggerFactory.getLogger(SearchCarCommand.class);
@@ -75,12 +72,6 @@ public class SearchCarCommand extends CommandTemplate {
     }
 
     private Integer getPageNumber(String[] path) {
-        Integer pageNumber = null;
-        if (path.length > 3){
-            pageNumber = Integer.parseInt(path[3]);
-        }else {
-            pageNumber = 1;
-        }
-        return pageNumber;
+        return path.length > 3 ? Integer.parseInt(path[3]) : Integer.parseInt("1");
     }
 }

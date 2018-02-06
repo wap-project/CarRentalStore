@@ -44,4 +44,10 @@ public class DaoFactory {
         orderDao.setConnection(dataSource.getConnection());
         return orderDao;
     }
+    public static DaoOrder getDaoOrder() throws SQLException {
+        DaoOrder daoOrder = new DaoOrder();
+        daoOrder.setConnection(dataSource.getConnection());
+        return daoOrder;
+    }
+
 }

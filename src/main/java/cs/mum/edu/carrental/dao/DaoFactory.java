@@ -33,4 +33,9 @@ public class DaoFactory {
         userDao.setConnection(dataSource.getConnection());
         return userDao;
     }
+    public static DaoCar getDaoCar() throws SQLException {
+        DaoCar daoCar = new DaoCar();
+        daoCar.setConnection(dataSource.getConnection());
+        return daoCar;
+    }
 }

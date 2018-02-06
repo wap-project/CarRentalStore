@@ -1,5 +1,6 @@
 package cs.mum.edu.carrental.command;
 
+import cs.mum.edu.carrental.command.car.SearchCarCommand;
 import cs.mum.edu.carrental.command.user.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +19,9 @@ public class CommandFactory {
         commands.put("registration", new RegistrationCommand());
         commands.put("recover", new RecoverCommand());
         commands.put("user", new UserInfoCommand());
+        commands.put("searchCar", new SearchCarCommand());
         //User relevent end
+
 
 //        commands.put("language", new LanguageCommand());
 //        commands.put("searchCar", new SearchCarCommand());

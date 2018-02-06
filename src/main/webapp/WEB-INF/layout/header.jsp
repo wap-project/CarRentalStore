@@ -3,14 +3,14 @@
 
 
 
-<div style="background-image: linear-gradient( to bottom right, #F8961C 0%, #FFD007 100%);">
+<div style="background-image: linear-gradient( to bottom right, #99CC33 0%, #99CC00 100%);">
     <table>
         <tr>
-            <td class="col-md-3">
+            <td class="col-md-6">
                 <c:url value="/img/logo.jpg" var="headerImg"/>
-                <img src="${headerImg}" style="max-width:320px;"/>
+                <img src="${headerImg}" style="width:100px; margin-left:40px"/>
             </td>
-            <td class="col-md-9" style="vertical-align: middle; display: table-cell; text-align: right" >
+            <td class="col-md-6" style="vertical-align: middle; display: table-cell; text-align: right" >
                 <h1 style="color: #1C75BC; font-weight: bold">   <fmt:message key="HEADER_TITLE"/> </h1>
             </td>
         </tr>

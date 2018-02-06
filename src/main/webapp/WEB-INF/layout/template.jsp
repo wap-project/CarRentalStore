@@ -6,18 +6,20 @@
 <html>
 <head>
     <!-- Latest compiled and minified CSS -->
-    <c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" var="bootsrapMin" />
+    <c:url value="/css/bootstrap.min.css" var="bootsrapMin" />
     <link rel="stylesheet" href="${bootsrapMin}"/>
     <!-- Optional theme -->
-    <c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" var="bootsrapTheme" />
+    <c:url value="/css/bootstrap-theme.css" var="bootsrapTheme" />
     <link rel="stylesheet" href="${bootsrapTheme}"/>
-    <c:url value="https://code.jquery.com/jquery-3.2.1.slim.min.js" var="jquery" />
+    <c:url value="/css/font-awesome.css" var="fontAwesome" />
+    <link rel="stylesheet" href="${fontAwesome}"/>
+    <c:url value="/js/jquery-3.2.1.js" var="jquery" />
     <script src="${jquery}"> </script>
-    <c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" var="bootstrapJS" />
+    <c:url value="/js/bootstrap.min.js" var="bootstrapJS" />
     <script src="${bootstrapJS}"> </script>
     <title><tiles:getAsString name="title"/></title>
     <c:url value="/img/favicon.ico.png" var="favicon"/>
-    <link rel="shortcut icon" href="${favicon}" type="image/jpg">
+    <link rel="shortcut icon" href="${favicon}" type="image/png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -33,7 +35,7 @@
 <tiles:insertAttribute name="header"/>
 <table class="table" >
     <tr>
-        <td class="col-md-2" style="vertical-align:top"><tiles:insertAttribute name="menu" /></td>
+        <td class="col-md-3" style="vertical-align:top"><tiles:insertAttribute name="menu" /></td>
         <td class="col-md-9"><center><tiles:insertAttribute name="body"/></center></td>
     </tr>
 </table>

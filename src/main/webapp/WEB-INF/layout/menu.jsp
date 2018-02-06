@@ -31,7 +31,7 @@
                     </c:otherwise>
                 </c:choose>
                 <div class="form-group ${classEmail}" style="margin-bottom: 0">
-                    <label for="email" class=" control-label"><fmt:message key="EMAIL"/> <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </label>
+                    <label for="email" class=" control-label"><fmt:message key="EMAIL"/> <span class="fa fa-car" aria-hidden="true"></span> </label>
                     <div class="col-sm-12">
                         <input class="form-control" id="email" name="email" type="text" value="${user.email}" placeholder="email"/>
                     </div>
@@ -53,7 +53,7 @@
                     </c:otherwise>
                 </c:choose>
                 <div class="form-group ${classPassword}" style="margin-bottom: 0">
-                    <label for="password" class=" control-label"><fmt:message key="PASSWORD"/> <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </label>
+                    <label for="password" class="control-label"><fmt:message key="PASSWORD"/> <span class="fa fa-car" aria-hidden="true"></span> </label>
                     <div class="col-sm-12">
                         <input class="form-control" id="password" name="password" type="password" value="${user.password}" placeholder="password"/>
                     </div>

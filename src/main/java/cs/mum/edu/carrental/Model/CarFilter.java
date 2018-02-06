@@ -2,9 +2,7 @@ package cs.mum.edu.carrental.Model;
 
 import java.util.ResourceBundle;
 
-/**
- * Created by Сергей on 03.01.2015.
- */
+
 public class CarFilter {
 
     private String className;

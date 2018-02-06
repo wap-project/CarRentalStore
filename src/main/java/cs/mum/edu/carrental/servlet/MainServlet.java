@@ -20,7 +20,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(name = "MainServlet")
+
 public class MainServlet extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(MainServlet.class);
 
@@ -51,7 +51,6 @@ public class MainServlet extends HttpServlet {
         clearSessionInvalidUser(request);
         autorizeByCookies(request);
         Command command = CommandFactory.createCommand(request);
-        System.out.println(command.getClass().getCanonicalName());
         command.execute(request, response);
     }
 

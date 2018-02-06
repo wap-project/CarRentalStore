@@ -1,8 +1,5 @@
 package cs.mum.edu.carrental.Model;
 
-/**
- * Created by Сергей on 03.01.2015.
- */
 public class Car {
     private Integer id;
     private String model;

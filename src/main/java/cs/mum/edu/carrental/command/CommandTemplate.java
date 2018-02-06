@@ -1,5 +1,7 @@
 package cs.mum.edu.carrental.command;
 
+import cs.mum.edu.carrental.Model.User;
+import org.apache.commons.beanutils.BeanUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,5 +33,30 @@ public class CommandTemplate implements Command {
         infoRedirect(request, response, "BAD_COMMAND" );
     }
 
+    public User getUserFromParameters(HttpServletRequest request) {
+        User user = new User();
+        try {
+            BeanUtils.populate(user, request.getParameterMap());
+        } catch (ReflectiveOperationException e) {
+            logger.error("BeanUtilsError", e);
+        }
+        return user;
+    }
+
+    public boolean isAccessNotPermitted(HttpServletRequest request, HttpServletResponse response) {
+        User user = (User) request.getSession().getAttribute("user");
+        if (user == null || !user.getIsAdmin() ) {
+            infoRedirect(request, response, "LOG_IN_WARN");
+            return true;
+        }
+        return false;
+    }
+
+    public RequestDispatcher getSamePageDispatcher(HttpServletRequest request) {
+        String[] path = request.getServletPath().split("/");
+        if (path.length < 2)
+            return request.getRequestDispatcher("/index" +".tiles");
+        return request.getRequestDispatcher("/"+ path[1] +".tiles");
+    }
 
 }

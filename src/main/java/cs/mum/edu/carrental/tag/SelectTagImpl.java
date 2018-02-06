@@ -6,9 +6,6 @@ import javax.servlet.jsp.tagext.BodyContent;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 import java.io.IOException;
 
-/**
- * Created by Сергей on 17.12.2014.
- */
 public class SelectTagImpl extends BodyTagSupport {
     private String selected;
     private String className;

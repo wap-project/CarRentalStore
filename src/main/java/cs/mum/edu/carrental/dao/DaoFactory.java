@@ -1,5 +1,6 @@
 package cs.mum.edu.carrental.dao;
 
+import cs.mum.edu.carrental.Model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,9 +23,14 @@ public class DaoFactory {
     }
 
     public static DbInitDestroyDao getDbInitDestroyDao() throws SQLException {
-        DbInitDestroyDao DbInitDestroyDao = new DbInitDestroyDao();
-        System.out.println(dataSource);
-        DbInitDestroyDao.setConnection(dataSource.getConnection());
-        return DbInitDestroyDao;
+        DbInitDestroyDao dbInitDestroyDao = new DbInitDestroyDao();
+        dbInitDestroyDao.setConnection(dataSource.getConnection());
+        return dbInitDestroyDao;
+    }
+
+    public static UserDao getUserDao() throws SQLException {
+        UserDao userDao = new UserDao();
+        userDao.setConnection(dataSource.getConnection());
+        return userDao;
     }
 }

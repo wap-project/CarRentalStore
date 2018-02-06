@@ -8,6 +8,14 @@
         <welcome-file>/index</welcome-file>
     </welcome-file-list>
 
+    <context-param>
+        <param-name>tilesDefinitions</param-name>
+        <param-value>/WEB-INF/defs/general.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.apache.tiles.web.startup.simple.SimpleTilesListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>cs.mum.edu.carrental.servlet.MainServlet</servlet-class>

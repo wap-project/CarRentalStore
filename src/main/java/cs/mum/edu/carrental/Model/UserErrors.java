@@ -1,8 +1,5 @@
 package cs.mum.edu.carrental.Model;
 
-/**
- * Created by Сергей on 30.12.2014.
- */
 public class UserErrors {
     private String firstname;
     private String lastname;

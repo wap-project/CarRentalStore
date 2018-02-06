@@ -6,14 +6,14 @@
 <html>
 <head>
     <!-- Latest compiled and minified CSS -->
-    <c:url value="/css/bootstrap.min.css" var="bootsrapMin" />
+    <c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" var="bootsrapMin" />
     <link rel="stylesheet" href="${bootsrapMin}"/>
     <!-- Optional theme -->
-    <c:url value="/css/bootstrap-theme.css" var="bootsrapTheme" />
+    <c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" var="bootsrapTheme" />
     <link rel="stylesheet" href="${bootsrapTheme}"/>
-    <c:url value="/js/jquery-3.2.1.js" var="jquery" />
+    <c:url value="https://code.jquery.com/jquery-3.2.1.slim.min.js" var="jquery" />
     <script src="${jquery}"> </script>
-    <c:url value="/js/bootstrap.min.js" var="bootstrapJS" />
+    <c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" var="bootstrapJS" />
     <script src="${bootstrapJS}"> </script>
     <title><tiles:getAsString name="title"/></title>
     <c:url value="/img/favicon.ico.png" var="favicon"/>

@@ -3,9 +3,7 @@ package cs.mum.edu.carrental.Model;
 
 import java.sql.Date;
 
-/**
- * Created by Сергей on 04.01.2015.
- */
+
 public class Order {
     private int orderId;
     private int carId;

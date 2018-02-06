@@ -67,7 +67,7 @@ public class UserDao {
         return user;
     }
 
-    public boolean findByEmailAndPassword(User user) {
+    public boolean  findByEmailAndPassword(User user) {
         try (PreparedStatement ps = connection.prepareStatement(FIND_USER_WHERE_EMAIL_AND_PASSWORD)) {
             ps.setString(1, user.getEmail());
             ps.setString(2, user.getPassword());

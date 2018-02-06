@@ -38,13 +38,13 @@ public class AuthCommand extends CommandTemplate {
         }
 
         RequestDispatcher requestDispatcher = getSamePageDispatcher(request);
-
+        dispatcherForward(request, response, requestDispatcher);
     }
 
     private boolean verifyUserParams(HttpServletRequest request, User user, UserErrors userErrors) {
         boolean isAnyError = false;
-        if (user.getEmail() != null && user.getPassport() != null && !user.getEmail().trim().equals("")
-                && user.getPassport().trim().equals("")) {
+        if (user.getEmail() != null && user.getPassword() != null && !user.getEmail().trim().equals("")
+                && !user.getPassword().trim().equals("")) {
             try {
                 UserDao userDao = DaoFactory.getUserDao();
                 isAnyError =  !userDao.findByEmailAndPassword(user);

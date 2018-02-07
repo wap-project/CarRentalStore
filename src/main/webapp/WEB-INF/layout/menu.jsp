@@ -66,7 +66,7 @@
                 </div >
                 <button type="submit" class="btn btn-primary form-control" name="command" value="auth"><fmt:message key="SIGN_IN"/> </button>
             </form>
-            <a href="/registration" class="small"><fmt:message key="REGISTRATION"/> </a> | <a href="/recover" class="small"><fmt:message key="FORGOT"/> </a>
+            <a href="/registration" class="small"><fmt:message key="REGISTRATION"/> </a>
         </c:otherwise>
     </c:choose>
 

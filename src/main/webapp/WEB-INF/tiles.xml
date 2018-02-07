@@ -26,10 +26,6 @@
               <put-attribute name="title" value="Main page" />
               <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
        </definition>
-       <definition name="recover" extends="common" >
-              <put-attribute name="title" value="Recovering page" />
-              <put-attribute name="body" value="/WEB-INF/jsp/recover.jsp" />
-       </definition>
        <definition name="info" extends="common" >
               <put-attribute name="title" value="Info page" />
               <put-attribute name="body" value="/WEB-INF/jsp/info.jsp" />

@@ -26,7 +26,7 @@
     <%--error handling end--%>
     <div class="form-group ${classFirstName}">
         <label for="firstname" class="col-md-2 control-label"><fmt:message key="FIRST_NAME"/><span
-                class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </label>
+                class="fa fa-car" aria-hidden="true"></span> </label>
         <div class="col-md-10">
             <input class="form-control" id="firstname" name="firstname" type="text" value="${user.firstname}"
                    placeholder="firstname"/>
@@ -51,7 +51,7 @@
     <%--error handling end--%>
     <div class="form-group ${classLastName}">
         <label for="lastname" class="col-md-2 control-label"><fmt:message key="LAST_NAME"/><span
-                class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </label>
+                class="fa fa-car" aria-hidden="true"></span> </label>
         <div class="col-md-10">
             <input class="form-control" id="lastname" name="lastname" type="text" value="${user.lastname}"
                    placeholder="lastname"/>
@@ -77,7 +77,7 @@
     <%--error handling end--%>
     <div class="form-group ${classEmail}">
         <label for="email" class="col-md-2 control-label"><fmt:message key="EMAIL"/><span
-                class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </label>
+                class="fa fa-car" aria-hidden="true"></span> </label>
         <div class="col-md-10">
             <input class="form-control" id="email" name="email" type="text" value="${user.email}" placeholder="email"/>
         </div>
@@ -101,7 +101,7 @@
     <%--error handling end--%>
     <div class="form-group ${classPassport}">
         <label for="passport" class="col-md-2 control-label"><fmt:message key="PASSPORT"/><span
-                class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </label>
+                class="fa fa-car" aria-hidden="true"></span> </label>
         <div class="col-md-10">
             <input class="form-control" id="passport" name="passport" type="text" value="${user.passport}"
                    placeholder="passport"/>
@@ -126,7 +126,7 @@
     <%--error handling end--%>
     <div class="form-group ${classPassword}">
         <label for="password" class="col-md-2 control-label"><fmt:message key="PASSWORD"/> <span
-                class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </label>
+                class="fa fa-car" aria-hidden="true"></span> </label>
         <div class="col-md-10">
             <input class="form-control" id="password" name="password" type="password" value="${user.password}"
                    placeholder="password"/>
@@ -136,7 +136,7 @@
 
     <div class="form-group">
         <label for="passwordCheck" class="col-md-2 control-label"><fmt:message key="REPEAT"/><span
-                class="glyphicon glyphicon-asterisk" aria-hidden="true"></span></label>
+                class="fa fa-car" aria-hidden="true"></span></label>
         <div class="col-md-10">
             <input class="form-control" id="passwordCheck" name="passwordCheck" type="password"
                    value="${user.passwordCheck}" placeholder="repeat password"/>

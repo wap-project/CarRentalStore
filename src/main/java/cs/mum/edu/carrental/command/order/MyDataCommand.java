@@ -1,4 +1,4 @@
-package cs.mum.edu.carrental.command.order.show;
+package cs.mum.edu.carrental.command.order;
 
 import cs.mum.edu.carrental.Model.Order;
 import cs.mum.edu.carrental.Model.User;

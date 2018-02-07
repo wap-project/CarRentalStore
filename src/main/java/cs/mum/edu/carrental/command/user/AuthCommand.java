@@ -34,7 +34,7 @@ public class AuthCommand extends CommandTemplate {
             request.getSession().setAttribute("userError", userErrors);
             request.getSession().setAttribute("auth", true);
         } else {
-            addAuthCookies(request, response, user);
+            addAuthCookies(request, response);
         }
 
         RequestDispatcher requestDispatcher = getSamePageDispatcher(request);
@@ -65,18 +65,17 @@ public class AuthCommand extends CommandTemplate {
             userErrors.setEmail("BLANK_FIELDS");
         }
 
-        // why?
         request.getSession().setAttribute("user", user);
 
         return isAnyError;
     }
 
-    public void addAuthCookies(HttpServletRequest request, HttpServletResponse response, User user) {
+    public void addAuthCookies(HttpServletRequest request, HttpServletResponse response) {
         String cookieOn = request.getParameter("cookieOn");
         if (cookieOn != null && cookieOn.equals("on")) {
             Map<String, String> userMap = new HashMap<>();
             try {
-                userMap = BeanUtils.describe(user);
+                userMap = BeanUtils.describe((User)request.getSession().getAttribute("user"));
             } catch (Exception e) {
                 logger.error("BeanUtils Error: ", e);
             }

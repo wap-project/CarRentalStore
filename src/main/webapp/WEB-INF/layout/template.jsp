@@ -36,7 +36,7 @@
 <table class="table" >
     <tr>
         <td class="col-md-2" style="vertical-align:top"><tiles:insertAttribute name="menu" /></td>
-        <td class="col-md-10"><center><tiles:insertAttribute name="body"/></center></td>
+        <td class="col-md-9"><center><tiles:insertAttribute name="body"/></center></td>
     </tr>
 </table>
 <tiles:insertAttribute name="footer"/>

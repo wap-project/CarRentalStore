@@ -22,11 +22,10 @@
     <link rel="shortcut icon" href="${favicon}" type="image/png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <style type="text/css">
         body{
-            font-family: 'Ubuntu Condensed', sans-serif;
-            font-size: large;
+            font-family: "Microsoft YaHei", sans-serif;
+            /*font-size: large;*/
         }
     </style>
 </head>

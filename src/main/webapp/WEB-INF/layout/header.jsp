@@ -10,8 +10,8 @@
                 <c:url value="/img/logo.jpg" var="headerImg"/>
                 <img src="${headerImg}" style="width:100px; margin-left:40px"/>
             </td>
-            <td class="col-md-6" style="vertical-align: middle; display: table-cell; text-align: right" >
-                <h1 style="color: #088007; font-weight: bold">   <fmt:message key="HEADER_TITLE"/> </h1>
+            <td class="col-md-10" style="vertical-align: middle; display: table-cell; text-align: Right" >
+                <h1 style="color: #088007; font-weight: bold;">   <fmt:message key="HEADER_TITLE"/> </h1>
             </td>
         </tr>
     </table>

@@ -9,7 +9,6 @@ public class IndexCommand extends CommandTemplate {
         String path = request.getServletPath();
         if (path.equals("/"))
             path = "/index";
-
         dispatcherForward(request, response, request.getRequestDispatcher(path + ".tiles"));
     }
 }

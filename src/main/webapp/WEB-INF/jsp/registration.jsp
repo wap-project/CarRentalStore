@@ -1,3 +1,4 @@
+<%@include file="../layout/lib_bundle.jsp"%>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -115,7 +116,7 @@
             <div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only"><fmt:message key="ERROR"/>:</span>
-                <fmt:message key="${userError.password}"/>
+                <fmt:message key="${userError.password}" />
             </div>
             <c:set var="classPassword" value="has-error"/>
         </c:when>
@@ -144,9 +145,16 @@
     </div>
 
     <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
+        <div class="col-md-offset-2 col-md-4">
+            <button type="submit" class="btn btn-primary form-control" name="command" value="index"><span
+                    class="fa fa-times-circle" aria-hidden="true"></span>
+                <a href="/index" style="color: #FFF"><fmt:message key="CANCEL"/></a></button>
+        </div>
+
+        <div class="col-md-offset-1 col-md-4">
             <button type="submit" class="btn btn-primary form-control" name="command" value="register"><span
-                    class="glyphicon glyphicon-ok" aria-hidden="true"></span> <fmt:message key="REGISTER"/></button>
+                    class="fa fa-check-circle" aria-hidden="true"></span> <fmt:message key="REGISTER"/></button>
         </div>
     </div>
+
 </form>

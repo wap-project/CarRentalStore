@@ -37,13 +37,11 @@ public class CommandFactory {
         commands.put("add_penalty", new OrderPenaltyCommand());
         commands.put("close_order", new OrderCloseCommand());
         //Administrator relevent end
-        
+
 
     }
 
     public static Command createCommand(HttpServletRequest request) {
-
-
         String value = request.getParameter("command");
 
         if (value != null) {
@@ -92,6 +90,8 @@ public class CommandFactory {
 
     private static Command getCommandByParameter(String value) {
         switch (value.toLowerCase()) {
+            case "index":
+                return commands.get("index");
             case "register":
                 return commands.get("registration");
             case "auth":

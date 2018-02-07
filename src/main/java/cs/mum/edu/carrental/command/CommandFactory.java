@@ -37,11 +37,11 @@ public class CommandFactory {
         commands.put("add_penalty", new OrderPenaltyCommand());
         commands.put("close_order", new OrderCloseCommand());
         //Administrator relevent end
-
+        
 
     }
 
-    public static Command createCommand(HttpServletRequest request){
+    public static Command createCommand(HttpServletRequest request) {
 
 
         String value = request.getParameter("command");
@@ -58,21 +58,35 @@ public class CommandFactory {
     private static Command getCommandByRequestPath(HttpServletRequest request) {
         String mainPath = buildPathForSearch(request);
 
-        switch (mainPath){
-            case "searchcar": return commands.get("searchCar");
-            case "searchcar/pages":return commands.get("searchCar");
-            case "reserve":return commands.get("reserve");
-            case "my_new_orders":return commands.get("myData");
-            case "my_rejected_orders":return commands.get("myData");
-            case "my_approved_orders":return commands.get("myData");
-            case "my_closed_orders":return commands.get("myData");
-            case "all_new_orders":return commands.get("allData");
-            case "all_approved_orders":return commands.get("allData");
-            case "all_rejected_orders":return commands.get("allData");
-            case "all_closed_orders":return commands.get("allData");
-            case "order":return commands.get("order");
-            case "user":return commands.get("user");
-            default:return commands.get("index");
+        switch (mainPath) {
+            case "searchcar":
+                return commands.get("searchCar");
+            case "searchcar/pages":
+                return commands.get("searchCar");
+            case "reserve":
+                return commands.get("reserve");
+            case "my_new_orders":
+                return commands.get("myData");
+            case "my_rejected_orders":
+                return commands.get("myData");
+            case "my_approved_orders":
+                return commands.get("myData");
+            case "my_closed_orders":
+                return commands.get("myData");
+            case "all_new_orders":
+                return commands.get("allData");
+            case "all_approved_orders":
+                return commands.get("allData");
+            case "all_rejected_orders":
+                return commands.get("allData");
+            case "all_closed_orders":
+                return commands.get("allData");
+            case "order":
+                return commands.get("order");
+            case "user":
+                return commands.get("user");
+            default:
+                return commands.get("index");
         }
     }
 
@@ -105,7 +119,7 @@ public class CommandFactory {
 
     private static String buildPathForSearch(HttpServletRequest request) {
         String[] path = request.getServletPath().split("/");
-        if (path.length>2){
+        if (path.length > 2) {
             return path[1] + "/" + path[2];
         }
         if (path.length == 2)

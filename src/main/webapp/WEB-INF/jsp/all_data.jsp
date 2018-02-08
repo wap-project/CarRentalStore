@@ -1,6 +1,5 @@
 <%@ include file="../layout/lib_bundle.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<fmt:setBundle basename="language"/>
 
 <h1 align="center"><fmt:message key="${message}"/></h1>
 <%--My order data start--%>
@@ -23,7 +22,8 @@
     <tr>
       <td><fmt:formatNumber value="${order.orderId}" /> </td>
       <td><fmt:formatNumber value="${order.carId}"/> </td>
-      <td><a href="/user?id=${order.userId}"><fmt:formatNumber value="${order.userId}"/></a></td>
+      <%--<td><a href="/user?id=${order.userId}"><fmt:formatNumber value="${order.userId}"/></a></td>--%>
+      <td><button class="btn btn-primary form-control" value="${order.userId}" onclick="getUserInfo(this.value)"/>${order.userId}</td>
       <td>${order.model}</td>
       <td>${order.brand}</td>
       <td><fmt:formatDate value="${order.dateStart}" type="date"/></td>
@@ -37,5 +37,17 @@
   </tbody>
 </table>
 
-<%--My order data start--%>
+<%--My order data end--%>
+
+<table id="userInfoTable" class="table  table-bordered table-hover" style="display: none">
+  <tbody>
+  <tr>
+    <th><fmt:message key="USER_ID" /></th>
+    <th><fmt:message key="FIRST_NAME" /></th>
+    <th><fmt:message key="LAST_NAME" /></th>
+    <th><fmt:message key="PASSPORT" /></th>
+    <th><fmt:message key="EMAIL" /></th>
+    <th>Close</th>
+  </tr>
+</table>
 

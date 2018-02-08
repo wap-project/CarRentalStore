@@ -1,6 +1,5 @@
 <%@include file="../layout/lib_bundle.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<fmt:setBundle basename="language"/>
 
 <h1 align="center"><fmt:message key="${message}"/></h1>
 

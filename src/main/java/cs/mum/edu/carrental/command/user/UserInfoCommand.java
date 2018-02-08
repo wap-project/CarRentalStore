@@ -1,5 +1,6 @@
 package cs.mum.edu.carrental.command.user;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import cs.mum.edu.carrental.Model.User;
 import cs.mum.edu.carrental.command.CommandTemplate;
 import cs.mum.edu.carrental.dao.DaoFactory;
@@ -10,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 public class UserInfoCommand extends CommandTemplate {
@@ -30,9 +32,13 @@ public class UserInfoCommand extends CommandTemplate {
                 infoRedirect(request, response, "USER_BY_ID_REQUEST_FAILED" );
                 /*handle request on not existing users end*/
             } else {
-                request.getSession().setAttribute("userInfo", userChosen);
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/user" + ".tiles");
-                requestDispatcher.forward(request, response);
+//                request.getSession().setAttribute("userInfo", userChosen);
+//                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/user" + ".tiles");
+//                requestDispatcher.forward(request, response);
+                ObjectMapper mapper = new ObjectMapper();
+                PrintWriter out = response.getWriter();
+                out.println(mapper.writeValueAsString(userChosen));
+                out.close();
             }
         } catch (NumberFormatException e) {
             infoRedirect(request, response, "USER_BY_ID_REQUEST_FAILED" );

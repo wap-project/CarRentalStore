@@ -1,7 +1,6 @@
 <%@include file="../layout/lib_bundle.jsp"%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<fmt:setBundle basename="language"/>
 
 <h1 align="center"><fmt:message key="ORDER_TITLE"/></h1>
 
@@ -34,7 +33,7 @@
           if (document.getElementById('reason').value != ""){
             document.getElementById('REJECT_ORDER').className = "btn btn-primary form-control";
           } else {
-            document.getElementById('REJECT_ORDER').className =   "btn btn-primary form-control disabled";
+            document.getElementById('REJECT_ORDER').className = "btn btn-primary form-control disabled";
           }
         }
       </script>

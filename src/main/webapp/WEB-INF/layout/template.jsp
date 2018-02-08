@@ -20,7 +20,7 @@
     <title><tiles:getAsString name="title"/></title>
     <c:url value="/img/favicon.ico.png" var="favicon"/>
     <link rel="shortcut icon" href="${favicon}" type="image/png">
-
+    <script src="/js/administrator.js" ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
         body{
